@@ -1,0 +1,5 @@
+streamlit==1.43.2
+torch
+pandas
+matplotlib
+scikit-learn
