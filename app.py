@@ -174,8 +174,8 @@ def save_model_bundle(artifacts: TrainingArtifacts) -> bytes:
     return buffer.read()
 
 
-st.title("⚡ Power Plant ANN Regression")
-st.caption("Minimal Streamlit UI based on your notebook")
+st.title("⚡ Power Plant Energy Output Prediction")
+st.caption("An interactive ANN-based regression application for training, evaluation, and real-time prediction.")
 
 with st.sidebar:
     st.subheader("Settings")
@@ -186,8 +186,10 @@ with st.sidebar:
     train_clicked = st.button("Train model", type="primary", use_container_width=True)
 
 st.markdown(
-    f"Upload a dataset that contains **{TARGET_COLUMN}** as the target column. "
-    "The app will train the same ANN architecture from the notebook and show metrics, a loss curve, and predictions."
+    f"""
+    This application uses an Artificial Neural Network (ANN) to predict **{TARGET_COLUMN}** from uploaded tabular data.  
+    Upload a CSV file containing numeric input features and the target column **{TARGET_COLUMN}** to train the model, evaluate performance, visualize loss curves, and generate predictions.
+    """
 )
 
 if uploaded_file is not None:
